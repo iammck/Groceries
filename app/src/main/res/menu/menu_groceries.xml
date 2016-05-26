@@ -1,0 +1,10 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.mck.groceries.GroceriesActivity">
+    <item
+        android:id="@+id/action_rm_purchased"
+        android:orderInCategory="100"
+        android:title="@string/remove_purchased"
+        app:showAsAction="never" />
+</menu>
