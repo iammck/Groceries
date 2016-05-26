@@ -6,11 +6,11 @@ import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.google.firebase.analytics.FirebaseAnalytics;
 import com.google.gson.Gson;
 import com.mck.groceries.model.Grocery;
 
@@ -61,6 +61,10 @@ public class EditGroceryActivity extends AppCompatActivity {
             String quantity = mGrocery.quantity.toString();
             tvQuantity.setText(quantity);
         }
+
+        Bundle bundle = new Bundle();
+        bundle.putString("time_millis", String.valueOf(System.currentTimeMillis()));
+        FirebaseAnalytics.getInstance(this).logEvent(FirebaseAnalytics.Event.APP_OPEN, bundle);
     }
 
     private boolean wasEdited() {
