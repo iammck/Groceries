@@ -44,14 +44,6 @@
                     android:layout_weight="3"
                     android:gravity="bottom">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Name"
-                        android:id="@+id/textView"
-                        android:singleLine="true"
-                        android:inputType="number" />
-
                     <EditText
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -61,23 +53,30 @@
                         android:hint="Name"
                         android:text="@string/no_text" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Quantity"
-                        android:id="@+id/textView4"
-                        android:singleLine="true"
-                        android:inputType="number" />
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
 
-                    <EditText
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:inputType="number"
-                        android:ems="10"
-                        android:id="@+id/etQuantity"
-                        android:text="@string/default_quantity"
-                        android:maxLength="8"
-                        android:selectAllOnFocus="true" />
+                        <EditText
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:inputType="number"
+                            android:ems="10"
+                            android:id="@+id/etQuantity"
+                            android:text="@string/default_quantity"
+                            android:maxLength="8"
+                            android:singleLine="true"
+                            android:selectAllOnFocus="true"
+                            android:layout_weight="1" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Quantity"
+                            android:layout_weight="1"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true" />
+                    </RelativeLayout>
 
                 </LinearLayout>
 
@@ -99,7 +98,6 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/etDescription"
                     android:hint="Enter description"
-                    android:nextFocusForward="@id/textView"
                     android:maxLength="256" />
             </LinearLayout>
         </LinearLayout>
